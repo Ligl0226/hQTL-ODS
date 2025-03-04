@@ -7,7 +7,7 @@ The method features:
 - Not only for mid-parent heterosis (MPH) but also for better-parent heterosis (BPH)
 - Also, support for analyses of the combination of different effects, i.e., additive + cumulative additive-by-additive effect of a locus, et al.
 
-# Phenotype data
+# Phenotype
 The phenotypic data of all parents and hybrids and the simulated data sets collected in the study of "Powerful one-dimensional scan to detect heterotic QTL" are provided in this folder.
 
 ## Citation
