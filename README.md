@@ -13,6 +13,7 @@ The phenotypic data of all parents and hybrids and the simulated data sets colle
 
 ## Citation
 Powerful one-dimensional scan to detect heterotic QTL
+
 Li G, Schmidt RH, Zhao Y, Reif JC, Jiang Y. Powerful one-dimensional scan to detect heterotic QTL. bioRxiv [Internet]. 2025; Available from: [https://www.biorxiv.org/content/early/2025/05/12/2025.05.06.652159]
 
 ## Author and contact
