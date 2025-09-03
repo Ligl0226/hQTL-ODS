@@ -1,6 +1,7 @@
 ##==================================================================##
 ##--R function: Powerful one-dimensional scan to detect heterotic QTL
 ##--Highlight: MPH-hQTL-ODS
+##--Highlight: update the PVE corrected by VC*(mean(diag(K))-mean(K))
 ##--Maintainer: GuoLiang Li (lig@ipk-gatersleben.de)
 ##--Date: 2023.11.10
 ##==================================================================##
@@ -237,6 +238,24 @@ MPH_hQTL_ODS <- function(PHdata, GNdata, KinMatlist=NULL, P3D=TRUE){
     Khi_wave2 <- Khi_wave/mean(diag(Khi_wave))
     
     ##--estimate the log-likelihood value of full model by gaston
+    # if(P3D==FALSE){
+    #   gaston_solni <- lmm.aireml(Y = y_wave,X = NULL,
+    #                              K = list(Khi_wave2,
+    #                                       Kd_wave2,
+    #                                       Kaa_wave2,
+    #                                       Kad_wave2,
+    #                                       Kdd_wave2),
+    #                              verbose = F)
+    # }else{
+    #   gaston_solni <- lmm.aireml(Y = y_wave,X = NULL,
+    #                              K = list(Khi_wave2,
+    #                                       Kc_wave2),
+    #                              verbose = F)
+    # }
+    # VarCompi <- c(gaston_solni$tau,gaston_solni$sigma2)
+    
+    ## update here for PVE only
+    gaston_solni <- NULL
     if(P3D==FALSE){
       gaston_solni <- lmm.aireml(Y = y_wave,X = NULL,
                                  K = list(Khi_wave2,
@@ -245,13 +264,22 @@ MPH_hQTL_ODS <- function(PHdata, GNdata, KinMatlist=NULL, P3D=TRUE){
                                           Kad_wave2,
                                           Kdd_wave2),
                                  verbose = F)
+      VarCompi <- c(gaston_solni$tau,gaston_solni$sigma2)
+      VarCompi[1] <- VarCompi[1] * (mean(diag(Khi_wave2))-mean(Khi_wave2))
+      VarCompi[2] <- VarCompi[2] * (mean(diag(Kd_wave2))-mean(Kd_wave2))
+      VarCompi[3] <- VarCompi[3] * (mean(diag(Kaa_wave2))-mean(Kaa_wave2))
+      VarCompi[4] <- VarCompi[4] * (mean(diag(Kad_wave2))-mean(Kad_wave2))
+      VarCompi[5] <- VarCompi[5] * (mean(diag(Kdd_wave2))-mean(Kdd_wave2))
     }else{
       gaston_solni <- lmm.aireml(Y = y_wave,X = NULL,
                                  K = list(Khi_wave2,
                                           Kc_wave2),
                                  verbose = F)
+      VarCompi <- c(gaston_solni$tau,gaston_solni$sigma2)
+      VarCompi[1] <- VarCompi[1] * (mean(diag(Khi_wave2))-mean(Khi_wave2))
+      VarCompi[2] <- VarCompi[2] * (mean(diag(Kc_wave2))-mean(Kc_wave2))
     }
-    VarCompi <- c(gaston_solni$tau,gaston_solni$sigma2)
+    
     VarCompiProp <- VarCompi/sum(VarCompi)
     PVEi <- VarCompiProp[1]
     LRi <- -2*(gaston_soln0$logL-gaston_solni$logL)
@@ -278,3 +306,4 @@ MPH_hQTL_ODS <- function(PHdata, GNdata, KinMatlist=NULL, P3D=TRUE){
   return(LRres)
   
 }
+
