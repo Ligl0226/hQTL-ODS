@@ -52,7 +52,7 @@ source("./R/QTL_ODS.R")
 Please refer to [R01.ODS_code_domoo.R](R01.ODS_code_domoo.R) for details.
 
 ## License
-hQTL-ODS is distributed under the GPL-3.0 license.
+hQTL-ODS is distributed under the [GPL-3.0 license](LICENSE.txt).
 
 # Phenotype
 The phenotypic data of all parents and hybrids and the simulated data sets collected in the study of "Powerful one-dimensional scan to detect heterotic QTL" are provided in this folder.
