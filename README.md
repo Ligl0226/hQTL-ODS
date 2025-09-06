@@ -9,10 +9,12 @@ Powerful one-dimensional scan to detect heterotic QTL.
 - [System Requirements](#system-requirements)
 - [Installation Guide](#installation-guide)
 - [Usage and Demo](#usage-and-demo)
+- [Phenotype](#phenotype)
 - [License](#license)
+- [Citation](#citation)
 - [Authors](#authors)
 - [Contact](#contact)
-- [Citation](#citation)
+
 
 ## Overview and features:
 - The heterotic effects were modeled unbiasedly according to the original definition, i.e., the dominance effect of a locus and its epistatic interaction effect with all other loci were considered, independent of their effect sizes. [http://www.nature.com/articles/ng.3974]
@@ -50,11 +52,11 @@ source("./R/QTL_ODS.R")
 ## Usage and Demo
 Please refer to [R01.ODS_code_domoo.R](R01.ODS_code_domoo.R) for details. All expected outputs from the demo dataset can be generated within 2 hours on a standard desktop with 10 CPU cores.
 
+## Phenotype
+The phenotypic data of all parents and hybrids and the simulated data sets collected in the study of "Powerful one-dimensional scan to detect heterotic QTL" are provided in this folder.
+
 ## License
 hQTL-ODS is distributed under the [GPL-3.0 license](LICENSE.txt).
-
-# Phenotype
-The phenotypic data of all parents and hybrids and the simulated data sets collected in the study of "Powerful one-dimensional scan to detect heterotic QTL" are provided in this folder.
 
 ## Citation
 Powerful one-dimensional scan to detect heterotic QTL
