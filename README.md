@@ -49,7 +49,7 @@ source("./R/QTL_ODS.R")
 ```
 
 ## Usage and Demo
-Please refer to [R01.ODS_code_domoo.R](R01.ODS_code_domoo.R) for details.
+Please refer to [R01.ODS_code_domoo.R](R01.ODS_code_domoo.R) for details. All expected outputs from the demo dataset can be generated within 2 hours on a standard desktop with 10 CPU cores.
 
 ## License
 hQTL-ODS is distributed under the [GPL-3.0 license](LICENSE.txt).
