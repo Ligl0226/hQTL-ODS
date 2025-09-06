@@ -38,8 +38,7 @@ This package is supported for Windows and Linux. The package has been tested on 
 - Rocky Linux 9.6 (Blue Onyx)
 
 ## Installation Guide
-You don't need to install anything.
-Load the R scripts into your R environment:
+Directly load the R scripts into your R environment:
 ```r
 source("./R/CalKinMat.R")
 source("./R/MPH_hQTL_ODS.R")
