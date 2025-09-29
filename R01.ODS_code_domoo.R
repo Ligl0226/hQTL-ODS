@@ -7,6 +7,8 @@
 ##        (1) data integrity check to ensure that all parental lines referenced 
 ##            in hybrids are present in both phenotype and genotype files.
 ##        (2) scan the individual heterotic effect component of the detected hQTL.
+##--Date: 2025.09.26 update: 
+##            illustrated using a mini demo dataset
 ##==================================================================##
 
 source("./R/CalKinMat.R")
@@ -16,8 +18,13 @@ source("./R/BPH_hQTL_ODS.R")
 source("./R/QTL_ODS.R")
 
 WorkDir <- "./"
-path_data <- "./data/HyW_PHdata_GNdata_Demo.Rdata"
-Memo <- "HyW_Demo"
+# path_data <- "./data/HyW_PHdata_GNdata_Demo.Rdata"
+# Memo <- "HyW_Demo"
+
+## Using the mini demo dataset as an example, the following analysis 
+## can be completed in about 10–30 minutes.
+path_data <- "./data/PHdata_GNdata_miniDemo.Rdata"
+Memo <- "Mini_Demo"
 
 
 ##==================================================================##
