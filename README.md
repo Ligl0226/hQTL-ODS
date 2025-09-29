@@ -50,7 +50,7 @@ source("./R/QTL_ODS.R")
 ```
 
 ## Usage and Demo
-Please refer to [R01.ODS_code_domoo.R](R01.ODS_code_domoo.R) for details. All expected outputs from the demo dataset (HyW_PHdata_GNdata_Demo.Rdata) can be generated within 2 hours on a standard desktop with 10 CPU cores. To go through all the demo code more quickly, we provide a much smaller demo dataset (PHdata_GNdata_miniDemo.Rdata), which includes 31 parental lines and 200 hybrids, along with genotypic data for 5,000 SNPs. Using this mini dataset, the entire process can be completed in approximately 20 minutes on a single CPU.
+Please refer to [R01.ODS_code_domoo.R](R01.ODS_code_domoo.R) for details. All expected outputs from the demo dataset (HyW_PHdata_GNdata_Demo.Rdata, including 131 parental lines and 1557 hybrids with 8,873 SNPs) can be generated within 2 hours on a standard desktop with 10 CPU cores. To go through all the demo code more quickly, we provide a much smaller demo dataset (PHdata_GNdata_miniDemo.Rdata), which includes 31 parental lines and 200 hybrids, along with genotypic data for 5,000 SNPs. Using this mini dataset, the entire process can be completed in approximately 20 minutes on a single CPU.
 
 In hQTL-ODS, likelihoods are estimated using lmm.aireml() from the [gaston](https://github.com/genostats/gaston/) package. Occasionally, you may see the warning: "EM step failed to improve likelihood (this should not happen)". This can occur due to minor numerical issues (e.g., floating-point errors or small tolerance eps = 1e-5 by default). The decreases are typically tiny, and iterations continue as usual. Subsequent AI-REML updates or EM corrections usually restore the likelihood. In short, these few warnings can be considered normal and do not affect the final results.
 
