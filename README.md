@@ -61,9 +61,7 @@ The phenotypic data of all parents and hybrids and the simulated data sets colle
 hQTL-ODS is distributed under the [GPL-3.0 license](LICENSE.txt).
 
 ## Citation
-Powerful one-dimensional scan to detect heterotic QTL
-
-Li G, Schmidt RH, Zhao Y, Reif JC, Jiang Y. Powerful one-dimensional scan to detect heterotic QTL. bioRxiv [Internet]. 2025; Available from: [https://www.biorxiv.org/content/early/2025/05/12/2025.05.06.652159]
+Guoliang Li, Renate H. Schmidt, Yusheng Zhao, Jochen C. Reif & Yong Jiang. Powerful one-dimensional scan to detect heterotic quantitative trait loci. Nature Communications (2025). doi: [https://doi.org/10.1038/s41467-025-65563-9]
 
 ## Authors
 Guoliang Li and Yong Jiang
